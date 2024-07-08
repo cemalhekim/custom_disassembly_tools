@@ -7,9 +7,10 @@ This project involves the design, manufacture, and programming of a custom end e
 1. [Design Phase](#design-phase)
 2. [Manufacturing Phase](#manufacturing-phase)
 3. [Programming Phase](#programming-phase)
-4. [Reason for Custom Build](#reason-for-custom-build)
-5. [Upgradeability](#upgradeability)
-6. [Conclusion](#conclusion)
+4. [Integration of Gripper with UR10e Robot and URScript Control](#integration-of-gripper-with-ur10e-robot-and-urscript-control)
+5. [Reason for Custom Build](#reason-for-custom-build)
+6. [Upgradeability](#upgradeability)
+7. [Conclusion](#conclusion)
 
 ## Design Phase
 The design phase was initiated in SolidWorks, where the custom parallel gripper was meticulously modeled. The gripper consists of the following key components:
@@ -25,7 +26,7 @@ The design phase was initiated in SolidWorks, where the custom parallel gripper 
 - **Strength and Durability**: Materials and geometry were chosen to ensure that the gripper can withstand the forces encountered during operation.
 - **Ease of Manufacturing**: The design was optimized for 3D printing to ensure ease of production and replication.
 
-https://github.com/cemalhekim/custom_end_effector/assets/98236326/c4c0b30a-d247-4683-993e-243f90bc8326
+![Assembly of the individual parts in Solidworks](https://github.com/cemalhekim/custom_end_effector/assets/98236326/c4c0b30a-d247-4683-993e-243f90bc8326)
 
 Here the assembly video of the end effector can be seen.
 
@@ -45,6 +46,10 @@ After printing, the components were carefully assembled:
 3. The servo motor was mounted onto the base plate.
 4. The rack and spur gear mechanism was aligned to ensure smooth parallel movement of the gripper fingers.
 
+![Assembled gripper after every individual part got printed](https://github.com/cemalhekim/custom_end_effector/assets/98236326/fbf8f287-cd1b-4ab5-9b70-ab97aa64cf2a)
+
+Here the assembled version of the gripper (without the base plate) can be seen.
+
 ## Programming Phase
 The gripper's movement is controlled by an Arduino Nano and a servo motor. The Arduino is programmed using the Arduino IDE to receive degree inputs from the terminal, which corresponds to the desired position of the gripper fingers.
 
@@ -56,9 +61,50 @@ The gripper's movement is controlled by an Arduino Nano and a servo motor. The A
 ### Software Implementation
 The Arduino code was written to interpret input from the terminal and convert it into corresponding servo motor positions.
 
-###Operation
+### Operation
 Initialization: The servo is initialized to the middle position (90 degrees).
 Input Handling: The Arduino reads input from the terminal, where the user can input a number between 1 and 9. Each number corresponds to a specific degree (0 to 180) for the servo motor, translating to the gripper's position.
+
+![First test of the grippers structure and code with random objects](https://github.com/cemalhekim/custom_end_effector/assets/98236326/03a990fa-94df-4316-a3ec-b8074539be75)
+
+## Integration of Gripper with UR10e Robot and URScript Control
+
+### Gripper Integration
+
+The custom-designed gripper was seamlessly integrated with the UR10e robot using a meticulously crafted baseplate. The dimensions of the baseplate and selection of M6 screws were meticulously chosen based on specifications derived from the UR10e datasheet, ensuring optimal compatibility and robust mounting.
+
+Baseplate Specifications:
+Dimensions: X mm x Y mm
+Mounting Screws: M6
+
+### Mounting Procedure
+Alignment: The gripper's baseplate was meticulously aligned with the UR10e robot's end effector interface to guarantee precise integration.
+Secure Fastening: Utilizing M6 screws, the baseplate was securely fastened to the robot, providing stability essential for reliable operation throughout the disassembly process of the window sash.
+Motion Planning and URScript Execution
+The disassembly task of a window sash was meticulously planned using Universal Robots' PolyScope interface. Additionally, a comprehensive URScript program was crafted using the urx library, enabling precise control and coordination of the gripper's actions.
+
+### Motion Planning
+#### Motion Planning with PolyScope
+Procedure Definition: The disassembly procedure of the window sash was meticulously outlined within the PolyScope interface, ensuring all steps were meticulously orchestrated for optimal efficiency and safety.
+Path Optimization: Pathways for the UR10e robot's arm were systematically optimized within PolyScope to facilitate seamless movement throughout the disassembly process, thereby enhancing overall operational efficiency.
+
+#### URScript Programming with urx Library
+The URScript program, developed using the urx library, provided advanced functionality and flexibility in controlling the gripper's actions with precision. The following example demonstrates the execution of URScript commands tailored for disassembling a window sash:
+
+```urscript
+# Example URScript for Disassembling Window Sash
+socket_open("ip_address", port)
+socket_send_string("set_digital_out(0, True)\n")
+socket_send_string("sleep(0.5)\n")
+socket_send_string("set_digital_out(0, False)\n")
+socket_send_string("sleep(0.5)\n")
+socket_close()
+```
+
+#### Usage and Execution
+Adaptation: The URScript commands were modified as needed to ensure precise control over the gripper's movements and actions throughout the disassembly process.
+Integration: Seamless integration of the gripper's Arduino interface with the UR10e robot's control system ensured cohesive and synchronized operation during the disassembly task.
+
 
 ## Reason for Custom Build
 The primary reasons for designing and building a custom end effector include:
