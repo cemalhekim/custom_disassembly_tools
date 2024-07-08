@@ -26,7 +26,7 @@ The design phase was initiated in SolidWorks, where the custom parallel gripper 
 - **Strength and Durability**: Materials and geometry were chosen to ensure that the gripper can withstand the forces encountered during operation.
 - **Ease of Manufacturing**: The design was optimized for 3D printing to ensure ease of production and replication.
 
-![Assembly of the individual parts in Solidworks](https://github.com/cemalhekim/custom_end_effector/assets/98236326/c4c0b30a-d247-4683-993e-243f90bc8326)
+https://github.com/cemalhekim/custom_end_effector/assets/98236326/c4c0b30a-d247-4683-993e-243f90bc8326
 
 Here the assembly video of the end effector can be seen.
 
@@ -65,7 +65,9 @@ The Arduino code was written to interpret input from the terminal and convert it
 Initialization: The servo is initialized to the middle position (90 degrees).
 Input Handling: The Arduino reads input from the terminal, where the user can input a number between 1 and 9. Each number corresponds to a specific degree (0 to 180) for the servo motor, translating to the gripper's position.
 
-![First test of the grippers structure and code with random objects](https://github.com/cemalhekim/custom_end_effector/assets/98236326/03a990fa-94df-4316-a3ec-b8074539be75)
+https://github.com/cemalhekim/custom_end_effector/assets/98236326/03a990fa-94df-4316-a3ec-b8074539be75
+
+Here the first test of the gripper can be seen.
 
 ## Integration of Gripper with UR10e Robot and URScript Control
 
@@ -105,6 +107,9 @@ socket_close()
 Adaptation: The URScript commands were modified as needed to ensure precise control over the gripper's movements and actions throughout the disassembly process.
 Integration: Seamless integration of the gripper's Arduino interface with the UR10e robot's control system ensured cohesive and synchronized operation during the disassembly task.
 
+https://github.com/cemalhekim/custom_end_effector/assets/98236326/72164fe5-6fe6-48c0-a904-7b0578fc1ca4
+
+Here the disassembly test of a window with the custom gripper can be seen.
 
 ## Reason for Custom Build
 The primary reasons for designing and building a custom end effector include:
