@@ -76,8 +76,11 @@ Here the first test of the gripper can be seen.
 The custom-designed gripper was seamlessly integrated with the UR10e robot using a meticulously crafted baseplate. The dimensions of the baseplate and selection of M6 screws were meticulously chosen based on specifications derived from the UR10e datasheet, ensuring optimal compatibility and robust mounting.
 
 Baseplate Specifications:
-Dimensions: X mm x Y mm
+Dimensions: R63
 Mounting Screws: M6
+
+![Dimensions of UR10e's Tool Head](https://github.com/cemalhekim/custom_disassembly_tools/assets/98236326/b6eb9025-c947-496f-9a56-bf5af6f7c142)
+
 
 ### Mounting Procedure
 Alignment: The gripper's baseplate was meticulously aligned with the UR10e robot's end effector interface to guarantee precise integration.
