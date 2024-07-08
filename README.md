@@ -33,9 +33,9 @@ Here the assembly video of the end effector can be seen.
 The manufacturing phase involved 3D printing the designed components using PLA material on an Original Prusa i3 MK3S+ 3D printer. Prusa Slicer was used to prepare the STL files for printing, ensuring optimal print settings for strength and precision.
 
 ### Printing Settings
-- **Layer Height**: 0.2 mm
-- **Infill Density**: 20% for non-structural parts, 40% for structural parts
-- **Print Speed**: 50 mm/s
+- **Layer Height**: 0.1 mm
+- **Infill Density**: 20% for non-structural parts, 80% for structural parts
+- **Print Speed**: 100 mm/s
 - **Supports**: Enabled for overhangs
 
 ### Assembly
@@ -68,20 +68,21 @@ The primary reasons for designing and building a custom end effector include:
 - **Flexibility and Adaptability**: A custom build allows for flexibility in design and functionality, catering to unique application needs.
 - **Learning and Development**: The process of designing, manufacturing, and programming a custom gripper provides valuable learning and development opportunities in robotics and engineering.
 
-##Upgradeability
+## Upgradeability
 This gripper design serves as a base platform that can be easily upgraded or modified for various applications. Potential upgrades include:
 
-Tool Attachments: The gripper can be adapted to hold different tools, such as screwdrivers, for specific tasks.
-Sensor Integration: Sensors can be added to enhance functionality, such as force sensing or tactile feedback.
-Enhanced Actuation: The servo motor can be replaced with more powerful actuators for increased gripping force or speed.
-Software Enhancements: The control software can be upgraded to include advanced features like automated object detection and gripping.
-Upgrade Example: Screwdriver Attachment
+- **Tool Attachments**: The gripper can be adapted to hold different tools, such as screwdrivers, for specific tasks.
+- **Sensor Integration**: Sensors can be added to enhance functionality, such as force sensing or tactile feedback.
+- **Enhanced Actuation**: The servo motor can be replaced with more powerful actuators for increased gripping force or speed.
+- **Software Enhancements**: The control software can be upgraded to include advanced features like automated object detection and gripping.
+
+### Upgrade Example: Screwdriver Attachment
 To upgrade the gripper to hold a screwdriver:
 
 Design a screwdriver holder that can be mounted onto the existing gripper fingers.
 Modify the software to include a mode for screwdriver operation, controlling the rotation and positioning as required.
 Test and calibrate the upgraded gripper to ensure reliable and precise operation.
 
-##Conclusion
+## Conclusion
 This project demonstrates the successful design, manufacture, and programming of a custom parallel gripper for the UR10e robot. The gripper's modular design and ease of upgradeability make it a versatile tool for a variety of applications. By following the steps outlined in this README, you can replicate and modify the gripper to suit your specific needs, providing a foundation for further innovation in robotic end effectors.
 
