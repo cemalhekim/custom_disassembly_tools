@@ -1,4 +1,4 @@
-# Custom End Effector for UR10e Project
+# Custom Disassembly Tools
 
 ## Overview
 This project involves the design, manufacture, and programming of a custom end effector parallel gripper for the UR10e robot. The gripper was designed in SolidWorks, 3D printed using PLA on an Original Prusa i3 MK3S+ 3D printer with Prusa Slicer, and programmed with an Arduino Nano and a servo motor. The parallel movement of the gripper is facilitated by a 3D printed spur gear and rack mechanism. This README provides a comprehensive overview of the project, detailing each phase from design to programming, along with the rationale for custom building the gripper and its upgradeability.
